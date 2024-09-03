@@ -10,11 +10,11 @@ Interactive Graphs: Visualize the previous and current stock prices through inte
 
 ## Usage
 1. Real-time Stock Data:
-   -Launch the app to receive real-time stock data.
+   - Launch the app to receive real-time stock data.
 3. CSV Data Extraction:
-   -If you have stock data in a CSV file, navigate to the relevant section in the app to extract and display the data.
+   - If you have stock data in a CSV file, navigate to the relevant section in the app to extract and display the data.
 3. Visualizing Stock Prices:
-   -Use the interactive graphs to visualize the previous and current stock prices based on stock tickers or stock names.
+   - Use the interactive graphs to visualize the previous and current stock prices based on stock tickers or stock names.
 
 ## Tech stack:
 1. Kotlin, Coroutines, Flow
