@@ -4,7 +4,6 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.plcoding.stockmarketapp.domain.model.CompanyListing
 
 @Dao
 interface StockDao {
@@ -15,15 +14,15 @@ interface StockDao {
     )
 
     @Query("DELETE FROM companylistingentity")
-    suspend fun clearCompanyListing()
+    suspend fun clearCompanyListings()
 
     @Query(
         """
             SELECT *
             FROM companylistingentity
             WHERE LOWER(name) LIKE '%' || LOWER(:query) || '%' OR
-                UPPER(:query) = symbol
-    """
+                UPPER(:query) == symbol
+        """
     )
-    suspend fun searchCompanyListing(query: String): List<CompanyListing>
+    suspend fun searchCompanyListing(query: String): List<CompanyListingEntity>
 }
